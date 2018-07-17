@@ -48,8 +48,8 @@ optimize.colors <- function(i, draft, deck.color.ind, num.non.land = 23,
   
   fit <- lp("max", f.obj, f.con, f.dir, f.rhs, all.int = TRUE)
   
-  deck <- cbind(colors.mat[which(fit$solution != 0),],
-                quantity.used = fit$solution[which(fit$solution != 0)])
+  deck <- cbind(colors.mat[which(fit$solution[1:nrow(colors.mat)] != 0),],
+                quantity.used = fit$solution[which(fit$solution[1:nrow(colors.mat)] != 0)])
   fit.deck <- list(fit = fit, deck = deck)
 }
 

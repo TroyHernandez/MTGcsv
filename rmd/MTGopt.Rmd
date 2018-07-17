@@ -10,8 +10,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Run Analysis
 
 ```{r}
-source("MTGopt_funcs.R")
-draft <- read.csv("m19_draft_180715_comp.csv", stringsAsFactors = FALSE)
+source("~/MTGcsv/MTGopt_funcs.R")
+draft <- read.csv("~/MTGcsv/m19_draft_180715_comp.csv",
+                  stringsAsFactors = FALSE)
 num.colors <- 3
 num.non.land <- 23
 fit.deck <- optimize.draft(draft, num.colors, num.non.land)
