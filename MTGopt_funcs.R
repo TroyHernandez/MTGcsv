@@ -2,7 +2,9 @@
 
 library("lpSolve")
 
-optimize.colors <- function(i, draft, deck.color.ind, num.non.land = 23,
+optimize.colors <- function(i, draft, deck.color.ind,
+                            num.non.land = 23,
+                            curve.penalty = 5,
                             Mtg.colors = c("B", "G", "R", "U", "W")){
   remove.colors <- c(i)
   colors.ind <- which(rowSums(draft[, Mtg.colors[-deck.color.ind[i,]]]) == 0)
@@ -11,7 +13,7 @@ optimize.colors <- function(i, draft, deck.color.ind, num.non.land = 23,
   # We are trying to maximize the collective score
   f.obj <- c(colors.mat$score)
   # adding in creature curve
-  f.obj <- c(f.obj, rep(-5, 12))
+  f.obj <- c(f.obj, rep(-1 * curve.penalty, 12))
 
   # We can only select the cards we have, the constraint will be on the rhs
   f.con <- diag(1, nrow = nrow(colors.mat), ncol = nrow(colors.mat))
@@ -53,7 +55,7 @@ optimize.colors <- function(i, draft, deck.color.ind, num.non.land = 23,
   fit.deck <- list(fit = fit, deck = deck)
 }
 
-optimize.draft <- function(draft, num.colors, num.non.land){
+optimize.draft <- function(draft, num.colors, num.non.land, curve.penalty = 5){
   Mtg.colors <- c("B", "G", "R", "U", "W")
   deck.colors <- t(combn(Mtg.colors, num.colors))
   deck.color.ind <- t(combn(1:5, num.colors))
@@ -62,12 +64,15 @@ optimize.draft <- function(draft, num.colors, num.non.land){
   for(i in 1:nrow(objective.values)){
     fit.deck <- optimize.colors(i = i, draft = draft,
                                 deck.color.ind = deck.color.ind,
-                                num.non.land = num.non.land)
+                                num.non.land = num.non.land,
+                                curve.penalty = curve.penalty)
     objective.values[i, "obj.val"] <- fit.deck$fit$objval
   }
   fit.deck <- optimize.colors(i = which.max(objective.values$obj.val),
                               draft = draft,
                               deck.color.ind = deck.color.ind,
-                              num.non.land = num.non.land)
-  fit.deck
+                              num.non.land = num.non.land,
+                              curve.penalty = curve.penalty)
+  fit.deck <- list(fit.deck = fit.deck,
+                   objective.values = objective.values)
 }

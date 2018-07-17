@@ -15,7 +15,7 @@ draft <- read.csv("~/MTGcsv/m19_draft_180715_comp.csv",
                   stringsAsFactors = FALSE)
 num.colors <- 3
 num.non.land <- 23
-fit.deck <- optimize.draft(draft, num.colors, num.non.land)
+fit.deck <- optimize.draft(draft, num.colors, num.non.land = num.non.land)
 ```
 
 ## Diagnostics

@@ -28,11 +28,17 @@ shinyUI(fluidPage(
                   "Number of Lands:",
                   min = 1,
                   max = 40,
-                  value = 17)
+                  value = 17),
+      sliderInput("curve.penalty",
+                  "Mana curve penalty:",
+                  min = 1,
+                  max = 50,
+                  value = 5)
     ),
     
     # Show a plot of the generated distribution
     mainPanel(
+      dataTableOutput("objective.values"),
       dataTableOutput("decklist"),
       plotOutput("distPlot")
     )
