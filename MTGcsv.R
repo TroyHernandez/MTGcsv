@@ -25,6 +25,6 @@ for(i in 1:length(m19)){
   }
 }
 
-m19.clean <- m19.flat[, c("name", "rarity", "colorIdentity", "types", "cmc")]
+m19.clean <- m19.flat[, c("name", "rarity", "colId", "types", "cmc")]
 
 write.csv(m19.clean, "m19.csv", row.names = FALSE)

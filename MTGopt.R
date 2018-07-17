@@ -12,7 +12,8 @@ objective.values <- data.frame(deck.colors, obj.val = rep(0, nrow(deck.colors)))
 # subset mat
 for(i in 1:nrow(objective.values)){
   fit.deck <- optimize.colors(i = i, draft = draft,
-                              deck.color.ind = deck.color.ind)
+                              deck.color.ind = deck.color.ind,
+                              num.non.land = num.non.land)
   objective.values[i, "obj.val"] <- fit.deck$fit$objval
 }
 fit.deck <- optimize.colors(i = which.max(objective.values$obj.val), draft = draft,
