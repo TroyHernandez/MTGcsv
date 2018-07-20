@@ -22,16 +22,21 @@ shinyUI(fluidPage(
       sliderInput("num.colors",
                   "Number of colors:",
                   min = 1,
-                  max = 5,
+                  max = 3,
                   value = 2),
       sliderInput("num.land",
                   "Number of Lands:",
-                  min = 1,
-                  max = 40,
+                  min = 10,
+                  max = 30,
                   value = 17),
       sliderInput("curve.penalty",
                   "Mana curve penalty:",
-                  min = 1,
+                  min = 0,
+                  max = 50,
+                  value = 5),
+      sliderInput("removal.penalty",
+                  "Removal penalty:",
+                  min = 0,
                   max = 50,
                   value = 5)
     ),
@@ -39,8 +44,10 @@ shinyUI(fluidPage(
     # Show a plot of the generated distribution
     mainPanel(
       dataTableOutput("objective.values"),
-      dataTableOutput("decklist"),
-      plotOutput("distPlot")
+      plotOutput("distPlot"),
+      HTML("Deck Stats"),
+      dataTableOutput("deckstats"),
+      dataTableOutput("decklist")
     )
   )
 ))

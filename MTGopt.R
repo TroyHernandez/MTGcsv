@@ -1,6 +1,6 @@
 # MTGopt.R
 
-draft <- read.csv("m19_draft_180715_comp.csv", stringsAsFactors = FALSE)
+draft <- read.csv("m19_draft_180719_fr.csv", stringsAsFactors = FALSE)
 num.colors <- 3
 num.non.land <- 23
 

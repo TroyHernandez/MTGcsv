@@ -5,8 +5,10 @@ library("lpSolve")
 optimize.colors <- function(i, draft, deck.color.ind,
                             num.non.land = 23,
                             curve.penalty = 5,
+                            removal.penalty = 5,
                             Mtg.colors = c("B", "G", "R", "U", "W")){
   remove.colors <- c(i)
+  # Take out cards with other colors
   colors.ind <- which(rowSums(draft[, Mtg.colors[-deck.color.ind[i,]]]) == 0)
   colors.mat <- draft[colors.ind, ]
   
@@ -14,6 +16,9 @@ optimize.colors <- function(i, draft, deck.color.ind,
   f.obj <- c(colors.mat$score)
   # adding in creature curve
   f.obj <- c(f.obj, rep(-1 * curve.penalty, 12))
+  # adding in removal requirement
+  f.obj <- c(f.obj, -1 * removal.penalty)
+  
 
   # We can only select the cards we have, the constraint will be on the rhs
   f.con <- diag(1, nrow = nrow(colors.mat), ncol = nrow(colors.mat))
@@ -38,13 +43,18 @@ optimize.colors <- function(i, draft, deck.color.ind,
                  rbind(matrix(0, nrow = nrow(f.con) - nrow(creature.slack.mat),
                               ncol = 12),
                        creature.slack.mat))
+  # Add in removal requirement
+  removal.vec <- c(colors.mat$Removal, rep(0, length = ncol(f.con) - length(colors.mat$Removal)))
+  f.con <- rbind(f.con, removal.vec)
+  f.con <- cbind(f.con, c(rep(0, nrow(f.con) - 1), 1))
 
   # The constraint to only pick cards we have
-  f.dir <- c(rep("<=", nrow(colors.mat)), rep("==", 7))
+  f.dir <- c(rep("<=", nrow(colors.mat)), rep("==", 7), ">=")
   
   # Using the cards we have for the RHS
-  creature.curve <- c(1, 5, 4, 4, 3, 1)
-  f.rhs <- c(colors.mat$quantity, num.non.land, creature.curve)
+  creature.curve <- c(1, 5, 4, 4, 3, 2)
+  min.removal <- 4
+  f.rhs <- c(colors.mat$quantity, num.non.land, creature.curve, min.removal)
   
   all.int <- TRUE
   
@@ -55,7 +65,8 @@ optimize.colors <- function(i, draft, deck.color.ind,
   fit.deck <- list(fit = fit, deck = deck)
 }
 
-optimize.draft <- function(draft, num.colors, num.non.land, curve.penalty = 5){
+optimize.draft <- function(draft, num.colors, num.non.land,
+                           curve.penalty = 5, removal.penalty = 5){
   Mtg.colors <- c("B", "G", "R", "U", "W")
   deck.colors <- t(combn(Mtg.colors, num.colors))
   deck.color.ind <- t(combn(1:5, num.colors))
@@ -65,14 +76,45 @@ optimize.draft <- function(draft, num.colors, num.non.land, curve.penalty = 5){
     fit.deck <- optimize.colors(i = i, draft = draft,
                                 deck.color.ind = deck.color.ind,
                                 num.non.land = num.non.land,
-                                curve.penalty = curve.penalty)
+                                curve.penalty = curve.penalty,
+                                removal.penalty = removal.penalty)
     objective.values[i, "obj.val"] <- fit.deck$fit$objval
   }
   fit.deck <- optimize.colors(i = which.max(objective.values$obj.val),
                               draft = draft,
                               deck.color.ind = deck.color.ind,
                               num.non.land = num.non.land,
-                              curve.penalty = curve.penalty)
+                              curve.penalty = curve.penalty,
+                              removal.penalty = removal.penalty)
   fit.deck <- list(fit.deck = fit.deck,
                    objective.values = objective.values)
+}
+
+
+odds.no.land <- function(num.turns, deck.size = 40, num.land.hand = 2,
+                         draw.size = 7, num.lands = 17){
+  total.cards.deck <- deck.size - draw.size
+  land.left <- num.lands - num.land.hand
+  sample.vec <- rep(0, 10000)
+  for(i in 1:10000){
+    sample.vec[i] <- sum(sample(total.cards.deck,
+                                size = num.turns) <= land.left)
+  }
+  quantile(sample.vec, seq(0, 1, .01))
+}
+
+# odds.no.land(num.turns = 12, deck.size = 40, draw.size = 6, num.land.hand = 2)
+
+# tribes = c("Artifact", "Ramp", "Goblin", "Dragon", "Lifelink")
+# new.tribes = c("Knight")
+create.qp.mats <- function(draft,
+                           tribes = c("Artifact", "Ramp", "Goblin", "Dragon",
+                                      "Lifelink", "Weenie", "Zombie"),
+                           tribal.boost = rep(5, length(tribes))){
+  tribe.mat <- matrix(0, nrow = nrow(draft), ncol = nrow(draft))
+  for(i in 1:length(tribes)){
+    tribe.mat <- tribe.mat +
+      tribal.boost[i] * draft[, tribes[i]] %*% t(draft[, tribes[i]])
+  }
+  tribe.mat
 }
