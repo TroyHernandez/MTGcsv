@@ -16,38 +16,45 @@ shinyUI(fluidPage(
   titlePanel("MTG Sealed Draft Tool"),
   
   # Sidebar with a slider input for number of bins 
-  sidebarLayout(
-    sidebarPanel(
-      fileInput("draft", "Upload Draft.csv"),
-      sliderInput("num.colors",
-                  "Number of colors:",
-                  min = 1,
-                  max = 3,
-                  value = 2),
-      sliderInput("num.land",
-                  "Number of Lands:",
-                  min = 10,
-                  max = 30,
-                  value = 17),
-      sliderInput("curve.penalty",
-                  "Mana curve penalty:",
-                  min = 0,
-                  max = 50,
-                  value = 5),
-      sliderInput("removal.penalty",
-                  "Removal penalty:",
-                  min = 0,
-                  max = 50,
-                  value = 5)
-    ),
+  fluidRow(
+    column(2,
+      wellPanel(
+        fileInput("draft", "Upload Draft.csv"),
+        sliderInput("num.colors",
+                    "Number of colors:",
+                    min = 1,
+                    max = 3,
+                    value = 2),
+        uiOutput("deck.choice"),
+        sliderInput("num.land",
+                    "Number of Lands:",
+                    min = 10,
+                    max = 30,
+                    value = 17),
+        sliderInput("curve.penalty",
+                    "Mana curve penalty:",
+                    min = 0,
+                    max = 50,
+                    value = 5),
+        sliderInput("removal.penalty",
+                    "Removal penalty:",
+                    min = 0,
+                    max = 50,
+                    value = 5),
+        tableOutput("objective.values")
+        )
+      ),
     
     # Show a plot of the generated distribution
-    mainPanel(
-      dataTableOutput("objective.values"),
-      plotOutput("distPlot"),
-      HTML("Deck Stats"),
-      dataTableOutput("deckstats"),
-      dataTableOutput("decklist")
+    column(6,
+           dataTableOutput("decklist"),
+           dataTableOutput("unused.cards")
+    ),
+    # Show a plot of the generated distribution
+    column(4,
+           plotOutput("distPlot"),
+           HTML("Deck Stats"),
+           tableOutput("deckstats")
+           )
     )
-  )
 ))

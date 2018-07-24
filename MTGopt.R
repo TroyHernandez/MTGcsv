@@ -1,7 +1,7 @@
 # MTGopt.R
 
 draft <- read.csv("m19_draft_180719_fr.csv", stringsAsFactors = FALSE)
-num.colors <- 3
+num.colors <- 2
 num.non.land <- 23
 
 Mtg.colors <- c("B", "G", "R", "U", "W")
