@@ -11,12 +11,18 @@ optimize.colors <- function(i, draft, deck.color.ind,
                             Mtg.colors = c("B", "G", "R", "U", "W"),
                             tribes = c("Artifact", "Ramp", "Goblin", "Dragon",
                                        "Lifelink", "Weenie", "Zombie"),
-                            tribal.boost = rep(5, length(tribes))){
+                            tribal.boost = rep(0, length(tribes))){
   remove.colors <- c(i)
   # Take out cards with other colors
   colors.ind <- which(rowSums(draft[, Mtg.colors[-deck.color.ind[i,]]]) == 0)
   colors.mat <- draft[colors.ind, ]
   
+  for(j in 1:length(tribes)){
+    if(sum(draft[, tribes[j]] == 2) > 0){
+      tribe.ind <- which(colors.mat[, tribes[j]] > 0)
+      colors.mat[tribe.ind, "score"] <- colors.mat[tribe.ind, "score"] + tribal.boost[j]
+    }
+  }
   # We are trying to maximize the collective score
   f.obj <- c(colors.mat$score)
   # adding in creature curve
@@ -159,7 +165,10 @@ optimize.colors.qp <- function(i, draft, deck.color.ind,
 
 optimize.draft <- function(draft, num.colors, num.non.land,
                            curve.penalty = 5, removal.penalty = 5,
-                           deck.choice = "Best"){
+                           deck.choice = "Best",
+                           tribes = c("Artifact", "Ramp", "Goblin", "Dragon",
+                                      "Lifelink", "Weenie", "Zombie"),
+                           tribal.boost = rep(0, length(tribes))){
   Mtg.colors <- c("B", "G", "R", "U", "W")
   deck.colors <- t(combn(Mtg.colors, num.colors))
   deck.color.ind <- t(combn(1:5, num.colors))
@@ -170,7 +179,10 @@ optimize.draft <- function(draft, num.colors, num.non.land,
                                 deck.color.ind = deck.color.ind,
                                 num.non.land = num.non.land,
                                 curve.penalty = curve.penalty,
-                                removal.penalty = removal.penalty)
+                                removal.penalty = removal.penalty,
+                                tribes = c("Artifact", "Ramp", "Goblin", "Dragon",
+                                           "Lifelink", "Weenie", "Zombie"),
+                                tribal.boost = tribal.boost)
     objective.values[i, "obj.val"] <- fit.deck$fit$objval
   }
   ov.colors <- apply(objective.values[, -ncol(objective.values)],
@@ -183,19 +195,30 @@ optimize.draft <- function(draft, num.colors, num.non.land,
                                 deck.color.ind = deck.color.ind,
                                 num.non.land = num.non.land,
                                 curve.penalty = curve.penalty,
-                                removal.penalty = removal.penalty)
+                                removal.penalty = removal.penalty,
+                                tribes = c("Artifact", "Ramp", "Goblin", "Dragon",
+                                           "Lifelink", "Weenie", "Zombie"),
+                                tribal.boost = tribal.boost)
   } else {
     fit.deck <- optimize.colors(i = which(obj.vals$colors == deck.choice),
                                 draft = draft,
                                 deck.color.ind = deck.color.ind,
                                 num.non.land = num.non.land,
                                 curve.penalty = curve.penalty,
-                                removal.penalty = removal.penalty)
+                                removal.penalty = removal.penalty,
+                                tribes = c("Artifact", "Ramp", "Goblin", "Dragon",
+                                           "Lifelink", "Weenie", "Zombie"),
+                                tribal.boost = tribal.boost)
   }
   
   obj.vals <- obj.vals[order(obj.vals$value, decreasing = TRUE), ]
+  
+  tribal.table <- rbind(colSums(fit.deck$deck[which(fit.deck$deck$quantity != 0), tribes] == 1),
+                        colSums(fit.deck$deck[which(fit.deck$deck$quantity != 0), tribes] == 2))
+  rownames(tribal.table) <- c("Followers", "Commanders")
   fit.deck <- list(fit.deck = fit.deck,
-                   objective.values = obj.vals)
+                   objective.values = obj.vals,
+                   tribal.table = t(tribal.table))
 }
 
 
@@ -211,7 +234,8 @@ odds.no.land <- function(num.turns, deck.size = 40, num.land.hand = 2,
   quantile(sample.vec, seq(0, 1, .01))
 }
 
-# odds.no.land(num.turns = 12, deck.size = 40, draw.size = 6, num.land.hand = 2)
+
+odds.no.land(num.turns = 9, deck.size = 40, draw.size = 7, num.land.hand = 4)
 
 # tribes = c("Artifact", "Ramp", "Goblin", "Dragon", "Lifelink")
 # new.tribes = c("Knight")

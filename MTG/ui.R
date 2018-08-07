@@ -19,12 +19,17 @@ shinyUI(fluidPage(
   fluidRow(
     column(2,
       wellPanel(
-        fileInput("draft", "Upload Draft.csv"),
+        HTML("<strong>INSTRUCTIONS</strong><br/>"),
+        downloadLink("downloadData", "1. Download the cardlist"),
+        HTML("<br/>2. Fill in the number of cards you drafted in the 'quantity' column and save."),
+        fileInput("draft", "3. Upload completed csv here:"),
+        HTML("4. Play with sliders to create the best deck you can!"),
         sliderInput("num.colors",
                     "Number of colors:",
-                    min = 1,
+                    min = 2,
                     max = 3,
-                    value = 2),
+                    value = 2,
+                    step = 1),
         uiOutput("deck.choice"),
         sliderInput("num.land",
                     "Number of Lands:",
@@ -41,20 +46,39 @@ shinyUI(fluidPage(
                     min = 0,
                     max = 50,
                     value = 5),
-        tableOutput("objective.values")
+        sliderInput("Artifact.boost", "Artifact Boost:", min = -5, max = 5,
+                    value = 0, step = .1),
+        sliderInput("Ramp.boost", "Ramp Boost:", min = -5, max = 5,
+                    value = 0, step = .1),
+        sliderInput("Goblin.boost", "Goblin Boost:", min = -5, max = 5,
+                    value = 0, step = .1),
+        sliderInput("Dragon.boost", "Dragon Boost:", min = -5, max = 5,
+                    value = 0, step = .1),
+        sliderInput("Lifelink.boost", "Lifelink Boost:", min = -5, max = 5,
+                    value = 0, step = .1),
+        sliderInput("Weenie.boost", "Weenie Boost:", min = -5, max = 5,
+                    value = 0, step = .1),
+        sliderInput("Zombie.boost", "Zombie Boost:", min = -5, max = 5,
+                    value = 0, step = .1)
         )
       ),
     
     # Show a plot of the generated distribution
     column(6,
+           HTML("<strong>YOUR DECK</strong>"),
            dataTableOutput("decklist"),
+           HTML("<strong>UNUSED CARDS</strong>"),
            dataTableOutput("unused.cards")
     ),
     # Show a plot of the generated distribution
     column(4,
+           HTML("<strong>DECK RANKINGS </strong>"),
+           tableOutput("objective.values"),
            plotOutput("distPlot"),
-           HTML("Deck Stats"),
-           tableOutput("deckstats")
+           HTML("<strong>DECK STATS</strong>"),
+           tableOutput("deckstats"),
+           HTML("<strong>DECK TRIBES</strong>"),
+           tableOutput("tribal.table")
            )
     )
 ))

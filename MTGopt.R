@@ -1,6 +1,6 @@
 # MTGopt.R
 
-draft <- read.csv("m19_draft_180719_fr.csv", stringsAsFactors = FALSE)
+draft <- read.csv("m19_draft_180727_fr.csv", stringsAsFactors = FALSE)
 num.colors <- 2
 num.non.land <- 23
 
@@ -13,7 +13,10 @@ objective.values <- data.frame(deck.colors, obj.val = rep(0, nrow(deck.colors)))
 for(i in 1:nrow(objective.values)){
   fit.deck <- optimize.colors(i = i, draft = draft,
                               deck.color.ind = deck.color.ind,
-                              num.non.land = num.non.land)
+                              num.non.land = num.non.land,
+                              tribes = c("Artifact", "Ramp", "Goblin", "Dragon",
+                                         "Lifelink", "Weenie", "Zombie"),
+                              tribal.boost = c(5, rep(0, length(tribes))))
   objective.values[i, "obj.val"] <- fit.deck$fit$objval
 }
 fit.deck <- optimize.colors(i = which.max(objective.values$obj.val), draft = draft,
