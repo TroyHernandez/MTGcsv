@@ -25,11 +25,11 @@ So I wrote the algorithm up, played around with it, made it into [an app](https:
 
 Womp, womp.  No beer money for me!  Regardless, it's interesting enough that I figured if can't make money off of it, I should at least open source it for a teachable moment.  And after all, in these times of Nazi resurgances, we need to teach people [how to beat Nazis](https://en.wikipedia.org/wiki/Linear_programming#History) again!  Seriously though, in my last 5 years in industry, using these algorithms have blown so many people way and generated so much revenue that it's clear that these algorithms and this field needs more attention!  And the release of the Guilds of Ravnica set provided a great opportunity.
 
-Side note: I also recently stumbled upon [this great function](https://berndschmidl.com/?p=182) that allows me to post to my blog directly to WordPress using the R programming language!  Given that I wrote the algorithm and the app in R, this was a great opportunity to try it out for myself.
+<!-- Side note: I also recently stumbled upon [this great function](https://berndschmidl.com/?p=182) that allows me to post to my blog directly to WordPress using the R programming language!  Given that I wrote the algorithm and the app in R, this was a great opportunity to try it out for myself. -->
 
 What follows is an algorithm for building an optimal Magic The Gathering standard sealed deck using linear programming.  I also wrote up a quadratic programming version of it, but getting it to work required proprietary libraries... I'm sure my employer will look forward to that iteration.  If you want to see the code, or add to it, or modify it, it's on [my github.](https://github.com/TroyHernandez/MTGcsv)
 
-# The algorithm
+# The Algorithm
 
 If you're really interested but don't know about linear programming, there are plenty of resources online.  [Here's Wikipedia](https://en.wikipedia.org/wiki/Linear_programming) to get you started.  This isn't going make you a pro, but it will help you be competitive.  This is also a very basic version of the algorithm.  It doesn't account for interactions between cards; e.g. lifelink cards won't be valued more if you include [Dawn of Hope](http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=452758) in your deck.  Last time I had a linear implementation of this, but this is more naturally solved using quadratic programming.
 
@@ -45,7 +45,7 @@ I'm happy to report that [mtgjson.com](https://mtgjson.com/) has most of the dat
 
 I used the `jsonlite` package to parse the data and then flattened it out.  We want one row per card.
 
-```{r}
+```{r, eval = FALSE}
 install.packages("jsonlite")
 library(jsonlite)
 mtg <- read_json(path = "AllSets.json")
@@ -75,7 +75,7 @@ GRN.clean <- GRN.flat[, c("name", "rarity", "colorIdentity", "types", "cmc")]
 
 Now we want to clean things up for our linear programming 
 
-```{r}
+```{r, eval = FALSE}
 GRN.clean <- cbind(GRN.clean, "score" = 0,
                    "B" = 0, "G" = 0, "R" = 0, "U" = 0, "W" = 0,
                    "quantity" = 0)
@@ -117,13 +117,15 @@ There was also some cleaning up to do with the rows of the csv.  The planeswalke
 ![](images/AssureAssemble.jpg)
 
 
-```{r}
+```{r, eval = FALSE}
 # Read back in and sort by color and cmc
 GRN.clean <- read.csv("GRN.csv")
 GRN.clean <- GRN.clean[order(GRN.clean$colorIdentity, GRN.clean$cmc), ]
 write.csv(GRN.clean, "GRN.csv", row.names = FALSE)
 ```
 
+
+## Code
 
 At this point we have the data we need.  Now to optimize!
 
@@ -139,7 +141,7 @@ num.non.land <- 23
 
 Above, I also loaded in a script `MTGopt_funcs.R`.  I'll explain the two main functions there.  The function `optimize.colors` is where all the work is done.  First we load in the `lpSolve` package.  Then we pick out the colors of the deck that we want to optimize.  Then we set constraints.  I'm using the excellent [Shadows Over Innistrad Prerelease Primer](https://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-prerelease-primer) to determine the number of creatures at each converted mana cost (cmc) that we want; i.e. `creature.curve`.  We add in [slack variables](https://en.wikipedia.org/wiki/Slack_variable) to allow for deviations from that standard; i.e. `creature.slack.mat`.  Without the slack variables, if we didn't have any 1 cmc creatures, the function would return an error.  The penalty for deviating from the recommendations in the primer is determined by the `curve.penalty`.  Additionally there is a `removal.penalty`.  That penalizes your deck for not having enough removal.  I don't have the time to manually encode which cards are removal cards, but if you want to add that to the `GRN.csv` send me a pull request!  With 17 lands and 19 creatures prescribed, I hard-coded 4 removal spells to get up to the 40 card deck, but that could also be a variable.
 
-```{r}
+```{r, eval = FALSE}
 library("lpSolve")
 
 optimize.colors <- function(i, draft, deck.color.ind,
@@ -223,7 +225,7 @@ optimize.colors <- function(i, draft, deck.color.ind,
 
 The second important function is one that tests every color combination.  You'll see some of the "tribes" from the last set that I used this algorithm on; M19.  That's some more hand-coding into the `GRN.csv` that'd have to be done, but again, no time right now.
 
-```{r}
+```{r, eval = FALSE}
 optimize.draft <- function(draft, num.colors, num.non.land,
                            curve.penalty = 5, removal.penalty = 5,
                            deck.choice = "Best",
@@ -293,7 +295,9 @@ fit <- optimize.draft(draft = draft,
                deck.choice = "Best",
                tribes = NULL)
 
-fit$fit.deck$deck
+fit$fit.deck$deck[, c(1, 3:6, 12:13)]
 ```
 
-There are some extras that I put in there for diagnostics.  I put in the unused cards of that color in the likely event you want to swap out a card or two.  I also put in all of the objective functions so you can compare the value of each color combination.  Of course this is all coded into a shiny app.  That's another blog post, but 
+There are some extras that I put in there for diagnostics.  I put in the unused cards of that color in the likely event you want to swap out a card or two.  I also put in all of the objective functions so you can compare the value of each color combination.  Of course this is all coded into [a shiny app](https://troyhernandez.shinyapps.io/SealedMTG/).  But that's another blog post... or you can explore [the repo](https://github.com/TroyHernandez/MTGcsv).
+
+Anyhow, I hope you learned a little about the glory of linear programming and R in your attempt to get a leg up on the competition.  I used this to create two decks yesterday; mostly the Boros deck above and the Black/Green/White deck if you turn down the penalty curve all the way.  I had 2 wins and 3 losses.  Obviously, in addition to the inherent randomness that makes Magic so fun, it's not perfect.
