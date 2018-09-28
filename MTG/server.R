@@ -11,7 +11,7 @@ library(shiny)
 source("MTGopt_funcs.R")
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
-  output$downloadData = downloadHandler(filename <- "m19_draft.csv",
+  output$downloadData = downloadHandler(filename <- "GRN.csv",
     content <- function(file){
       file.copy("m19_draft.csv", file)
       },
@@ -38,12 +38,13 @@ shinyServer(function(input, output) {
                      num.colors = input$num.colors,
                      num.non.land = 40 - input$num.land,
                      curve.penalty = input$curve.penalty,
-                     removal.penalty = input$removal.penalty,
+                     removal.penalty = 0, #input$removal.penalty,
                      deck.choice = input$deck.choice,
-                     tribal.boost = c(input$Artifact.boost, input$Ramp.boost,
-                                      input$Goblin.boost, input$Dragon.boost,
-                                      input$Lifelink.boost, input$Weenie.boost,
-                                      input$Zombie.boost))
+                     tribes = NULL) #,
+                     # tribal.boost = c(input$Artifact.boost, input$Ramp.boost,
+                     #                  input$Goblin.boost, input$Dragon.boost,
+                     #                  input$Lifelink.boost, input$Weenie.boost,
+                     #                  input$Zombie.boost))
     })
   output$decklist <- renderDataTable({
     fit.deck <- fit.deck()$fit.deck
@@ -78,10 +79,10 @@ shinyServer(function(input, output) {
     df
     }, rownames = TRUE, digits = 0)
   
-  output$tribal.table <- renderTable({
-    tribal.table <- fit.deck()$tribal.table
-    tribal.table
-  }, rownames = TRUE, digits = 0)
+  # output$tribal.table <- renderTable({
+  #   tribal.table <- fit.deck()$tribal.table
+  #   tribal.table
+  # }, rownames = TRUE, digits = 0)
   
   output$distPlot <- renderPlot({
     if(is.null(fit.deck())){return(NULL)}
