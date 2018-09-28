@@ -13,7 +13,7 @@ source("MTGopt_funcs.R")
 shinyServer(function(input, output) {
   output$downloadData = downloadHandler(filename <- "GRN.csv",
     content <- function(file){
-      file.copy("m19_draft.csv", file)
+      file.copy("GRN.csv", file)
       },
     contentType = "text/csv"
     )
