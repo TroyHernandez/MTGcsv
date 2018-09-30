@@ -14,8 +14,13 @@ optimize.colors <- function(i, draft, deck.color.ind,
                             tribal.boost = rep(0, length(tribes))){
   remove.colors <- c(i)
   # Take out cards with other colors
-  colors.ind <- which(rowSums(draft[, Mtg.colors[-deck.color.ind[i,]]]) == 0)
-  colors.mat <- draft[colors.ind, ]
+  if(length(deck.color.ind[i, ]) < 5){
+    bad.cols.mat <- as.matrix(draft[, Mtg.colors[-deck.color.ind[i,]]], nrow = nrow(Mtg.colors))
+    colors.ind <- which(rowSums(bad.cols.mat) == 0)
+    colors.mat <- draft[colors.ind, ]
+  } else {
+    colors.mat <- draft
+  }
   
   if(!is.null(tribes)){
     for(j in 1:length(tribes)){

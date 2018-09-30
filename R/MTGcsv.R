@@ -26,6 +26,7 @@ for(i in 1:length(GRN)){
 }
 
 GRN.clean <- GRN.flat[, c("name", "rarity", "colorIdentity", "types", "cmc")]
+
 GRN.clean <- cbind(GRN.clean, "score" = 0,
                    "B" = 0, "G" = 0, "R" = 0, "U" = 0, "W" = 0,
                    "quantity" = 0)
