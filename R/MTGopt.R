@@ -3,7 +3,7 @@
 source("MTG/MTGopt_funcs.R")
 source("MTG/read_utils.R")
 
-draft <- parse_decklist("sample_grn_decklist.txt")
+draft <- parse_decklist("sample_grn_decklist.txt" )
 
 num.colors <- 4
 num.non.land <- 23
