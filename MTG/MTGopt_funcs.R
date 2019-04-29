@@ -1,8 +1,8 @@
 # MTGopt_funcs.R
 
 library("lpSolve")
-library("quadprog")
-library("ROI")
+# library("quadprog")
+# library("ROI")
 
 optimize.colors <- function(i, draft, deck.color.ind,
                             num.non.land = 23,

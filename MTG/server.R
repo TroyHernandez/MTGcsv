@@ -11,7 +11,7 @@ library(shiny)
 source("MTGopt_funcs.R")
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
-  output$downloadData = downloadHandler(filename <- "RNA.csv",
+  output$downloadData = downloadHandler(filename <- "WAR.csv",
     content <- function(file){
       file.copy("RNA.csv", file)
       },
