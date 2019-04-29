@@ -1,250 +1,250 @@
 "name","rarity","colorIdentity","types","cmc","score","B","G","R","U","W","quantity"
+"Ugin's Conjurant","uncommon","","Creature","0",5.67,0,0,0,0,0,0
 "Karn, the Great Creator","rare","","Planeswalker","4",3.64,0,0,0,0,0,0
 "Ugin, the Ineffable","rare","","Planeswalker","6",9.94,0,0,0,0,0,0
-"Ugin's Conjurant","uncommon","","Creature","0",5.67,0,0,0,0,0,0
-"Ajani's Pridemate","uncommon","W","Creature","2",6.01,0,0,0,0,1,0
-"Battlefield Promotion","common","W","Instant","2",4.97,0,0,0,0,1,0
-"Bond of Discipline","uncommon","W","Sorcery","5",4.91,0,0,0,0,1,0
-"Bulwark Giant","common","W","Creature","6",3.34,0,0,0,0,1,0
-"Charmed Stray","common","W","Creature","1",2.57,0,0,0,0,1,0
-"Defiant Strike","common","W","Instant","1",4.02,0,0,0,0,1,0
-"Divine Arrow","common","W","Instant","2",6.73,0,0,0,0,1,0
-"Enforcer Griffin","common","W","Creature","5",5.34,0,0,0,0,1,0
-"Finale of Glory","mythic","W","Sorcery","2",9.33,0,0,0,0,1,0
-"Gideon Blackblade","mythic","W","Planeswalker","3",10.84,0,0,0,0,1,0
-"Gideon's Sacrifice","common","W","Instant","1",3.31,0,0,0,0,1,0
-"Gideon's Triumph","uncommon","W","Instant","2",5.97,0,0,0,0,1,0
-"God-Eternal Oketra","mythic","W","Creature","5",11.54,0,0,0,0,1,0
-"Grateful Apparition","uncommon","W","Creature","2",6.6,0,0,0,0,1,0
-"Ignite the Beacon","rare","W","Instant","5",3.95,0,0,0,0,1,0
-"Ironclad Krovod","common","W","Creature","4",3.07,0,0,0,0,1,0
-"Law-Rune Enforcer","common","W","Creature","1",7.11,0,0,0,0,1,0
-"Loxodon Sergeant","common","W","Creature","4",4.6,0,0,0,0,1,0
-"Makeshift Battalion","common","W","Creature","3",5.14,0,0,0,0,1,0
-"Martyr for the Cause","common","W","Creature","2",5.38,0,0,0,0,1,0
-"Parhelion II","rare","Artifact","Artifact","8",6.7,0,0,0,0,1,0
-"Pouncing Lynx","common","W","Creature","2",5.35,0,0,0,0,1,0
-"Prison Realm","uncommon","W","Enchantment","3",8.7,0,0,0,0,1,0
-"Rally of Wings","uncommon","W","Instant","2",4.1,0,0,0,0,1,0
-"Ravnica at War","rare","W","Sorcery","4",4.22,0,0,0,0,1,0
-"Rising Populace","common","W","Creature","3",5.49,0,0,0,0,1,0
-"Single Combat","rare","W","Sorcery","5",6.23,0,0,0,0,1,0
-"Sunblade Angel","uncommon","W","Creature","6",6.62,0,0,0,0,1,0
-"Teyo, the Shieldmage","uncommon","W","Planeswalker","3",4.08,0,0,0,0,1,0
-"Teyo's Lightshield","common","W","Creature","3",3.88,0,0,0,0,1,0
-"Tomik, Distinguished Advokist","rare","W","Creature","2",6.33,0,0,0,0,1,0
-"Topple the Statue","common","W","Instant","3",3.95,0,0,0,0,1,0
-"Trusted Pegasus","common","W","Creature","3",7.27,0,0,0,0,1,0
-"The Wanderer","uncommon","W","Planeswalker","4",6.89,0,0,0,0,1,0
-"Wanderer's Strike","common","W","Sorcery","5",7.27,0,0,0,0,1,0
-"War Screecher","common","W","Creature","2",5.38,0,0,0,0,1,0
-"Ashiok's Skulker","common","U","Creature","5",4.92,0,0,0,1,0,0
-"Augur of Bolas","uncommon","U","Creature","2",5.4,0,0,0,1,0,0
-"Aven Eternal","common","U","Creature","3",6.87,0,0,0,1,0,0
-"Bond of Insight","uncommon","U","Sorcery","4",4.58,0,0,0,1,0,0
-"Callous Dismissal","common","U","Sorcery","2",5.94,0,0,0,1,0,0
-"Commence the Endgame","rare","U","Instant","6",7.38,0,0,0,1,0,0
-"Contentious Plan","common","U","Sorcery","2",4.82,0,0,0,1,0,0
-"Crush Dissent","common","U","Instant","4",4.11,0,0,0,1,0,0
-"Erratic Visionary","common","U","Creature","2",5.75,0,0,0,1,0,0
-"Eternal Skylord","uncommon","U","Creature","5",7.72,0,0,0,1,0,0
-"Fblthp, the Lost","rare","U","Creature","2",5.17,0,0,0,1,0,0
-"Finale of Revelation","mythic","U","Sorcery","2",7.11,0,0,0,1,0,0
-"Flux Channeler","uncommon","U","Creature","3",6.66,0,0,0,1,0,0
-"God-Eternal Kefnet","mythic","U","Creature","4",10.65,0,0,0,1,0,0
-"Jace, Wielder of Mysteries","rare","U","Planeswalker","4",7.46,0,0,0,1,0,0
-"Jace's Triumph","uncommon","U","Sorcery","3",5.86,0,0,0,1,0,0
-"Kasmina, Enigmatic Mentor","uncommon","U","Planeswalker","4",7.84,0,0,0,1,0,0
-"Kasmina's Transmutation","common","U","Enchantment","2",7.05,0,0,0,1,0,0
-"Kiora's Dambreaker","common","U","Creature","6",5,0,0,0,1,0,0
-"Lazotep Plating","uncommon","U","Instant","2",5.22,0,0,0,1,0,0
-"Naga Eternal","common","U","Creature","3",2.54,0,0,0,1,0,0
-"Narset, Parter of Veils","uncommon","U","Planeswalker","3",4.99,0,0,0,1,0,0
-"Narset's Reversal","rare","U","Instant","2",5.08,0,0,0,1,0,0
-"No Escape","common","U","Instant","3",5.72,0,0,0,1,0,0
-"Relentless Advance","common","U","Sorcery","4",4.06,0,0,0,1,0,0
-"Rescuer Sphinx","uncommon","U","Creature","4",6.84,0,0,0,1,0,0
+"Guild Globe","common","Artifact","Artifact","2",4,0,0,0,0,0,0
+"Prismite","common","Artifact","Creature","2",3.27,0,0,0,0,0,0
 "Silent Submersible","rare","Artifact","Artifact","2",4.48,0,0,0,1,0,0
-"Sky Theater Strix","common","U","Creature","2",4.8,0,0,0,1,0,0
-"Spark Double","rare","U","Creature","4",7.21,0,0,0,1,0,0
-"Spellkeeper Weird","common","U","Creature","3",5.24,0,0,0,1,0,0
-"Stealth Mission","common","U","Sorcery","3",4.4,0,0,0,1,0,0
-"Tamiyo's Epiphany","common","U","Sorcery","4",6.35,0,0,0,1,0,0
-"Teferi's Time Twist","common","U","Instant","2",4.71,0,0,0,1,0,0
-"Thunder Drake","common","U","Creature","4",6.03,0,0,0,1,0,0
-"Totally Lost","common","U","Instant","5",4.58,0,0,0,1,0,0
-"Wall of Runes","common","U","Creature","1",3.25,0,0,0,1,0,0
-"Aid the Fallen","common","B","Sorcery","2",5.29,1,0,0,0,0,0
-"Banehound","common","B","Creature","1",2.71,1,0,0,0,0,0
-"Bleeding Edge","uncommon","B","Sorcery","3",7.24,1,0,0,0,0,0
+"Vivien's Arkbow","rare","Artifact","Artifact","2",7.64,0,1,0,0,0,0
+"Iron Bully","common","Artifact","Creature","3",4.02,0,0,0,0,0,0
+"Mana Geode","common","Artifact","Artifact","3",4.58,0,0,0,0,0,0
+"Mizzium Tank","rare","Artifact","Artifact","3",6.75,0,0,1,0,0,0
+"Firemind Vessel","uncommon","Artifact","Artifact","4",4.69,0,0,0,0,0,0
+"Saheeli's Silverwing","common","Artifact","Creature","4",4.24,0,0,0,0,0,0
 "Bolas's Citadel","rare","Artifact","Artifact","6",6.14,1,0,0,0,0,0
-"Bond of Revival","uncommon","B","Sorcery","5",5.26,1,0,0,0,0,0
-"Charity Extractor","common","B","Creature","4",3.63,1,0,0,0,0,0
-"Command the Dreadhorde","rare","B","Sorcery","6",6.24,1,0,0,0,0,0
-"Davriel, Rogue Shadowmage","uncommon","B","Planeswalker","3",6.12,1,0,0,0,0,0
-"Davriel's Shadowfugue","common","B","Sorcery","4",3.39,1,0,0,0,0,0
-"Deliver Unto Evil","rare","B","Sorcery","3",4.51,1,0,0,0,0,0
-"Dreadhorde Invasion","rare","B","Enchantment","2",8.75,1,0,0,0,0,0
+"God-Pharaoh's Statue","uncommon","Artifact","Artifact","6",3.61,0,0,0,0,0,0
+"Parhelion II","rare","Artifact","Artifact","8",6.7,0,0,0,0,1,0
+"Banehound","common","B","Creature","1",2.71,1,0,0,0,0,0
 "Dreadmalkin","uncommon","B","Creature","1",5.34,1,0,0,0,0,0
+"Kaya's Ghostform","common","B","Enchantment","1",4.25,1,0,0,0,0,0
+"Price of Betrayal","uncommon","B","Sorcery","1",4.79,1,0,0,0,0,0
+"Spark Harvest","common","B","Sorcery","1",7.21,1,0,0,0,0,0
+"Aid the Fallen","common","B","Sorcery","2",5.29,1,0,0,0,0,0
+"Dreadhorde Invasion","rare","B","Enchantment","2",8.75,1,0,0,0,0,0
 "Duskmantle Operative","common","B","Creature","2",4.63,1,0,0,0,0,0
-"The Elderspell","rare","B","Sorcery","2",6.29,1,0,0,0,0,0
 "Eternal Taskmaster","uncommon","B","Creature","2",7.61,1,0,0,0,0,0
 "Finale of Eternity","mythic","B","Sorcery","2",9.76,1,0,0,0,0,0
-"God-Eternal Bontu","mythic","B","Creature","5",10.45,1,0,0,0,0,0
-"Herald of the Dreadhorde","common","B","Creature","4",6.13,1,0,0,0,0,0
-"Kaya's Ghostform","common","B","Enchantment","1",4.25,1,0,0,0,0,0
-"Lazotep Behemoth","common","B","Creature","5",3.53,1,0,0,0,0,0
 "Lazotep Reaver","common","B","Creature","2",5.47,1,0,0,0,0,0
-"Liliana, Dreadhorde General","mythic","B","Planeswalker","6",11.37,1,0,0,0,0,0
 "Liliana's Triumph","uncommon","B","Instant","2",5.65,1,0,0,0,0,0
-"Massacre Girl","rare","B","Creature","5",9.62,1,0,0,0,0,0
-"Ob Nixilis, the Hate-Twisted","uncommon","B","Planeswalker","5",5.89,1,0,0,0,0,0
-"Ob Nixilis's Cruelty","common","B","Instant","3",8.68,1,0,0,0,0,0
-"Price of Betrayal","uncommon","B","Sorcery","1",4.79,1,0,0,0,0,0
-"Shriekdiver","common","B","Creature","3",4.52,1,0,0,0,0,0
 "Sorin's Thirst","common","B","Instant","2",5.77,1,0,0,0,0,0
-"Spark Harvest","common","B","Sorcery","1",7.21,1,0,0,0,0,0
-"Spark Reaper","common","B","Creature","3",5.55,1,0,0,0,0,0
-"Tithebearer Giant","common","B","Creature","6",5.39,1,0,0,0,0,0
-"Toll of the Invasion","common","B","Sorcery","3",4.03,1,0,0,0,0,0
+"The Elderspell","rare","B","Sorcery","2",6.29,1,0,0,0,0,0
 "Unlikely Aid","common","B","Instant","2",4.69,1,0,0,0,0,0
 "Vampire Opportunist","common","B","Creature","2",4.19,1,0,0,0,0,0
+"Bleeding Edge","uncommon","B","Sorcery","3",7.24,1,0,0,0,0,0
+"Davriel, Rogue Shadowmage","uncommon","B","Planeswalker","3",6.12,1,0,0,0,0,0
+"Deliver Unto Evil","rare","B","Sorcery","3",4.51,1,0,0,0,0,0
+"Ob Nixilis's Cruelty","common","B","Instant","3",8.68,1,0,0,0,0,0
+"Shriekdiver","common","B","Creature","3",4.52,1,0,0,0,0,0
+"Spark Reaper","common","B","Creature","3",5.55,1,0,0,0,0,0
+"Toll of the Invasion","common","B","Sorcery","3",4.03,1,0,0,0,0,0
 "Vizier of the Scorpion","uncommon","B","Creature","3",6,1,0,0,0,0,0
 "Vraska's Finisher","common","B","Creature","3",5.74,1,0,0,0,0,0
-"Ahn-Crop Invader","common","R","Creature","3",5.07,0,0,1,0,0,0
-"Blindblast","common","R","Instant","3",3.63,0,0,1,0,0,0
-"Bolt Bend","uncommon","R","Instant","4",3.74,0,0,1,0,0,0
-"Bond of Passion","uncommon","R","Sorcery","6",3.17,0,0,1,0,0,0
-"Burning Prophet","common","R","Creature","2",5.61,0,0,1,0,0,0
-"Chainwhip Cyclops","common","R","Creature","5",5.03,0,0,1,0,0,0
-"Chandra, Fire Artisan","rare","R","Planeswalker","4",8.4,0,0,1,0,0,0
-"Chandra's Pyrohelix","common","R","Instant","2",6.33,0,0,1,0,0,0
-"Chandra's Triumph","uncommon","R","Instant","2",7.51,0,0,1,0,0,0
-"Cyclops Electromancer","uncommon","R","Creature","5",6.08,0,0,1,0,0,0
-"Demolish","common","R","Sorcery","4",0.73,0,0,1,0,0,0
-"Devouring Hellion","uncommon","R","Creature","3",4.88,0,0,1,0,0,0
-"Dreadhorde Arcanist","rare","R","Creature","2",5.32,0,0,1,0,0,0
-"Dreadhorde Twins","uncommon","R","Creature","4",6.15,0,0,1,0,0,0
-"Finale of Promise","mythic","R","Sorcery","2",5.8,0,0,1,0,0,0
-"Goblin Assailant","common","R","Creature","2",3,0,0,1,0,0,0
-"Goblin Assault Team","common","R","Creature","4",3.84,0,0,1,0,0,0
-"Grim Initiate","common","R","Creature","1",4.53,0,0,1,0,0,0
-"Heartfire","common","R","Instant","2",5.54,0,0,1,0,0,0
-"Honor the God-Pharaoh","common","R","Sorcery","3",4.68,0,0,1,0,0,0
-"Ilharg, the Raze-Boar","mythic","R","Creature","5",10.8,0,0,1,0,0,0
-"Invading Manticore","common","R","Creature","6",5.33,0,0,1,0,0,0
-"Jaya, Venerated Firemage","uncommon","R","Planeswalker","5",6.74,0,0,1,0,0,0
-"Jaya's Greeting","common","R","Instant","2",7.83,0,0,1,0,0,0
-"Krenko, Tin Street Kingpin","rare","R","Creature","3",8.37,0,0,1,0,0,0
-"Mizzium Tank","rare","Artifact","Artifact","3",6.75,0,0,1,0,0,0
-"Nahiri's Stoneblades","common","R","Instant","2",3.4,0,0,1,0,0,0
-"Neheb, Dreadhorde Champion","rare","R","Creature","4",9.2,0,0,1,0,0,0
-"Raging Kronch","common","R","Creature","3",5.39,0,0,1,0,0,0
-"Samut's Sprint","common","R","Instant","1",4.22,0,0,1,0,0,0
-"Sarkhan the Masterless","rare","R","Planeswalker","5",9.71,0,0,1,0,0,0
-"Sarkhan's Catharsis","common","R","Instant","5",4.45,0,0,1,0,0,0
-"Spellgorger Weird","common","R","Creature","3",6.29,0,0,1,0,0,0
-"Tibalt, Rakish Instigator","uncommon","R","Planeswalker","3",5.56,0,0,1,0,0,0
-"Tibalt's Rager","uncommon","R","Creature","2",5.47,0,0,1,0,0,0
-"Turret Ogre","common","R","Creature","4",5.38,0,0,1,0,0,0
+"Charity Extractor","common","B","Creature","4",3.63,1,0,0,0,0,0
+"Davriel's Shadowfugue","common","B","Sorcery","4",3.39,1,0,0,0,0,0
+"Herald of the Dreadhorde","common","B","Creature","4",6.13,1,0,0,0,0,0
+"Bond of Revival","uncommon","B","Sorcery","5",5.26,1,0,0,0,0,0
+"God-Eternal Bontu","mythic","B","Creature","5",10.45,1,0,0,0,0,0
+"Lazotep Behemoth","common","B","Creature","5",3.53,1,0,0,0,0,0
+"Massacre Girl","rare","B","Creature","5",9.62,1,0,0,0,0,0
+"Ob Nixilis, the Hate-Twisted","uncommon","B","Planeswalker","5",5.89,1,0,0,0,0,0
+"Command the Dreadhorde","rare","B","Sorcery","6",6.24,1,0,0,0,0,0
+"Liliana, Dreadhorde General","mythic","B","Planeswalker","6",11.37,1,0,0,0,0,0
+"Tithebearer Giant","common","B","Creature","6",5.39,1,0,0,0,0,0
 "Arboreal Grazer","common","G","Creature","1",3.5,0,1,0,0,0,0
-"Arlinn, Voice of the Pack","uncommon","G","Planeswalker","6",7.06,0,1,0,0,0,0
-"Arlinn's Wolf","common","G","Creature","3",5.39,0,1,0,0,0,0
-"Awakening of Vitu-Ghazi","rare","G","Instant","5",9.08,0,1,0,0,0,0
-"Band Together","common","G","Instant","3",7.36,0,1,0,0,0,0
-"Bloom Hulk","common","G","Creature","4",6.94,0,1,0,0,0,0
+"Giant Growth","common","G","Instant","1",5.92,0,1,0,0,0,0
 "Bond of Flourishing","uncommon","G","Sorcery","2",4.89,0,1,0,0,0,0
-"Centaur Nurturer","common","G","Creature","4",5.41,0,1,0,0,0,0
-"Challenger Troll","uncommon","G","Creature","5",7.1,0,1,0,0,0,0
-"Courage in Crisis","common","G","Sorcery","3",4.43,0,1,0,0,0,0
-"Evolution Sage","uncommon","G","Creature","3",7.31,0,1,0,0,0,0
 "Finale of Devastation","mythic","G","Sorcery","2",7.44,0,1,0,0,0,0
 "Forced Landing","common","G","Instant","2",3.78,0,1,0,0,0,0
-"Giant Growth","common","G","Instant","1",5.92,0,1,0,0,0,0
-"God-Eternal Rhonas","mythic","G","Creature","5",10.4,0,1,0,0,0,0
-"Jiang Yanggu, Wildcrafter","uncommon","G","Planeswalker","3",6.9,0,1,0,0,0,0
-"Kraul Stinger","common","G","Creature","3",5.33,0,1,0,0,0,0
 "Kronch Wrangler","common","G","Creature","2",5.33,0,1,0,0,0,0
-"Mowu, Loyal Companion","uncommon","G","Creature","4",6.91,0,1,0,0,0,0
-"New Horizons","common","G","Enchantment","3",5.02,0,1,0,0,0,0
-"Nissa, Who Shakes the World","rare","G","Planeswalker","5",9.18,0,1,0,0,0,0
 "Nissa's Triumph","uncommon","G","Sorcery","2",3.71,0,1,0,0,0,0
 "Paradise Druid","uncommon","G","Creature","2",6.91,0,1,0,0,0,0
-"Planewide Celebration","rare","G","Sorcery","7",7.19,0,1,0,0,0,0
 "Pollenbright Druid","common","G","Creature","2",6.16,0,1,0,0,0,0
-"Primordial Wurm","common","G","Creature","6",4.05,0,1,0,0,0,0
 "Return to Nature","common","G","Instant","2",3.36,0,1,0,0,0,0
 "Snarespinner","common","G","Creature","2",5.25,0,1,0,0,0,0
 "Steady Aim","common","G","Instant","2",3.36,0,1,0,0,0,0
+"Arlinn's Wolf","common","G","Creature","3",5.39,0,1,0,0,0,0
+"Band Together","common","G","Instant","3",7.36,0,1,0,0,0,0
+"Courage in Crisis","common","G","Sorcery","3",4.43,0,1,0,0,0,0
+"Evolution Sage","uncommon","G","Creature","3",7.31,0,1,0,0,0,0
+"Jiang Yanggu, Wildcrafter","uncommon","G","Planeswalker","3",6.9,0,1,0,0,0,0
+"Kraul Stinger","common","G","Creature","3",5.33,0,1,0,0,0,0
+"New Horizons","common","G","Enchantment","3",5.02,0,1,0,0,0,0
+"Vivien's Grizzly","common","G","Creature","3",6.1,0,1,0,0,0,0
+"Vivien, Champion of the Wilds","rare","G","Planeswalker","3",8.54,0,1,0,0,0,0
+"Bloom Hulk","common","G","Creature","4",6.94,0,1,0,0,0,0
+"Centaur Nurturer","common","G","Creature","4",5.41,0,1,0,0,0,0
+"Mowu, Loyal Companion","uncommon","G","Creature","4",6.91,0,1,0,0,0,0
+"Awakening of Vitu-Ghazi","rare","G","Instant","5",9.08,0,1,0,0,0,0
+"Challenger Troll","uncommon","G","Creature","5",7.1,0,1,0,0,0,0
+"God-Eternal Rhonas","mythic","G","Creature","5",10.4,0,1,0,0,0,0
+"Nissa, Who Shakes the World","rare","G","Planeswalker","5",9.18,0,1,0,0,0,0
 "Storm the Citadel","uncommon","G","Sorcery","5",4.15,0,1,0,0,0,0
 "Thundering Ceratok","common","G","Creature","5",5.46,0,1,0,0,0,0
-"Vivien, Champion of the Wilds","rare","G","Planeswalker","3",8.54,0,1,0,0,0,0
-"Vivien's Arkbow","rare","Artifact","Artifact","2",7.64,0,1,0,0,0,0
-"Vivien's Grizzly","common","G","Creature","3",6.1,0,1,0,0,0,0
 "Wardscale Crocodile","common","G","Creature","5",4.71,0,1,0,0,0,0
-"Ajani, the Greathearted","rare","M","Planeswalker","4",8.77,0,1,0,0,1,0
-"Angrath's Rampage","uncommon","M","Sorcery","2",6.91,1,0,1,0,0,0
-"Bioessence Hydra","rare","M","Creature","5",8.03,0,1,0,1,0,0
-"Casualties of War","rare","M","Sorcery","6",8.16,1,1,0,0,0,0
-"Cruel Celebrant","uncommon","M","Creature","2",6.28,1,0,0,0,1,0
-"Deathsprout","uncommon","M","Instant","4",8.25,1,1,0,0,0,0
-"Despark","uncommon","M","Instant","2",7.95,1,0,0,0,1,0
-"Domri, Anarch of Bolas","rare","M","Planeswalker","3",8.41,0,1,1,0,0,0
-"Domri's Ambush","uncommon","M","Sorcery","2",8.08,0,1,1,0,0,0
-"Dovin's Veto","uncommon","M","Instant","2",4.6,0,0,0,1,1,0
-"Dreadhorde Butcher","rare","M","Creature","2",7.04,1,0,1,0,0,0
-"Elite Guardmage","uncommon","M","Creature","4",7.85,0,0,0,1,1,0
-"Enter the God-Eternals","rare","M","Sorcery","5",9.7,1,0,0,1,0,0
-"Feather, the Redeemed","rare","M","Creature","3",8.93,0,0,1,0,1,0
-"Gleaming Overseer","uncommon","M","Creature","3",7.75,1,0,0,1,0,0
-"Heartwarming Redemption","uncommon","M","Instant","4",4.16,0,0,1,0,1,0
-"Huatli's Raptor","uncommon","M","Creature","2",7.06,0,1,0,0,1,0
-"Invade the City","uncommon","M","Sorcery","3",5.45,0,0,1,1,0,0
-"Leyline Prowler","uncommon","M","Creature","3",7.47,1,1,0,0,0,0
-"Living Twister","rare","M","Creature","3",7.87,0,1,1,0,0,0
-"Mayhem Devil","uncommon","M","Creature","3",6.18,1,0,1,0,0,0
-"Merfolk Skydiver","uncommon","M","Creature","2",7.55,0,1,0,1,0,0
-"Neoform","uncommon","M","Sorcery","2",4.68,0,1,0,1,0,0
-"Nicol Bolas, Dragon-God","mythic","M","Planeswalker","5",10.43,1,0,1,1,0,0
-"Niv-Mizzet Reborn","mythic","M","Creature","5",4.16,1,1,1,1,1,0
-"Oath of Kaya","rare","M","Enchantment","3",7.94,1,0,0,0,1,0
-"Pledge of Unity","uncommon","M","Instant","3",6.81,0,1,0,0,1,0
-"Ral, Storm Conduit","rare","M","Planeswalker","4",7.37,0,0,1,1,0,0
-"Ral's Outburst","uncommon","M","Instant","4",8.15,0,0,1,1,0,0
-"Roalesk, Apex Hybrid","mythic","M","Creature","5",10.23,0,1,0,1,0,0
-"Role Reversal","rare","M","Sorcery","3",6.63,0,0,1,1,0,0
-"Rubblebelt Rioters","uncommon","M","Creature","3",5.84,0,1,1,0,0,0
-"Solar Blaze","rare","M","Sorcery","4",7.53,0,0,1,0,1,0
-"Sorin, Vengeful Bloodlord","rare","M","Planeswalker","4",8.43,1,0,0,0,1,0
-"Soul Diviner","rare","M","Creature","2",7.89,1,0,0,1,0,0
-"Storrev, Devkarin Lich","rare","M","Creature","4",8.94,1,1,0,0,0,0
-"Tamiyo, Collector of Tales","rare","M","Planeswalker","4",5.82,0,1,0,1,0,0
-"Teferi, Time Raveler","rare","M","Planeswalker","3",7.56,0,0,0,1,1,0
-"Tenth District Legionnaire","uncommon","M","Creature","2",7.18,0,0,1,0,1,0
-"Time Wipe","rare","M","Sorcery","5",9.59,0,0,0,1,1,0
-"Tolsimir, Friend to Wolves","rare","M","Creature","5",9.27,0,1,0,0,1,0
-"Tyrant's Scorn","uncommon","M","Instant","2",7.98,1,0,0,1,0,0
-"Widespread Brutality","rare","M","Sorcery","4",8.61,1,0,1,0,0,0
-"Angrath, Captain of Chaos","uncommon","M","Planeswalker","4",7.71,1,0,1,0,0,0
-"Ashiok, Dream Render","uncommon","M","Planeswalker","3",4.23,1,0,0,1,0,0
-"Dovin, Hand of Control","uncommon","M","Planeswalker","3",5.13,0,0,0,1,1,0
-"Huatli, the Sun's Heart","uncommon","M","Planeswalker","3",4.04,0,1,0,0,1,0
-"Kaya, Bane of the Dead","uncommon","M","Planeswalker","6",8.03,1,0,0,0,1,0
-"Kiora, Behemoth Beckoner","uncommon","M","Planeswalker","3",6.82,0,1,0,1,0,0
-"Nahiri, Storm of Stone","uncommon","M","Planeswalker","4",6.86,0,0,1,0,1,0
-"Saheeli, Sublime Artificer","uncommon","M","Planeswalker","3",6.87,0,0,1,1,0,0
-"Samut, Tyrant Smasher","uncommon","M","Planeswalker","4",6.23,0,1,1,0,0,0
-"Vraska, Swarm's Eminence","uncommon","M","Planeswalker","4",7.31,1,1,0,0,0,0
-"Firemind Vessel","uncommon","Artifact","Artifact","4",4.69,0,0,0,0,0,0
-"God-Pharaoh's Statue","uncommon","Artifact","Artifact","6",3.61,0,0,0,0,0,0
-"Guild Globe","common","Artifact","Artifact","2",4,0,0,0,0,0,0
-"Iron Bully","common","Artifact","Creature","3",4.02,0,0,0,0,0,0
-"Mana Geode","common","Artifact","Artifact","3",4.58,0,0,0,0,0,0
-"Prismite","common","Artifact","Creature","2",3.27,0,0,0,0,0,0
-"Saheeli's Silverwing","common","Artifact","Creature","4",4.24,0,0,0,0,0,0
+"Arlinn, Voice of the Pack","uncommon","G","Planeswalker","6",7.06,0,1,0,0,0,0
+"Primordial Wurm","common","G","Creature","6",4.05,0,1,0,0,0,0
+"Planewide Celebration","rare","G","Sorcery","7",7.19,0,1,0,0,0,0
 "Blast Zone","rare","Land","Land","0",6.7,0,0,0,0,0,0
 "Emergence Zone","uncommon","Land","Land","0",3.74,0,0,0,0,0,0
 "Gateway Plaza","common","Land","Land","0",4.87,0,0,0,0,0,0
 "Interplanar Beacon","uncommon","Land","Land","0",4.51,0,0,0,0,0,0
 "Karn's Bastion","rare","Land","Land","0",6.92,0,0,0,0,0,0
 "Mobilized District","rare","Land","Land","0",6.86,0,0,0,0,0,0
+"Angrath's Rampage","uncommon","M","Sorcery","2",6.91,1,0,1,0,0,0
+"Cruel Celebrant","uncommon","M","Creature","2",6.28,1,0,0,0,1,0
+"Despark","uncommon","M","Instant","2",7.95,1,0,0,0,1,0
+"Domri's Ambush","uncommon","M","Sorcery","2",8.08,0,1,1,0,0,0
+"Dovin's Veto","uncommon","M","Instant","2",4.6,0,0,0,1,1,0
+"Dreadhorde Butcher","rare","M","Creature","2",7.04,1,0,1,0,0,0
+"Huatli's Raptor","uncommon","M","Creature","2",7.06,0,1,0,0,1,0
+"Merfolk Skydiver","uncommon","M","Creature","2",7.55,0,1,0,1,0,0
+"Neoform","uncommon","M","Sorcery","2",4.68,0,1,0,1,0,0
+"Soul Diviner","rare","M","Creature","2",7.89,1,0,0,1,0,0
+"Tenth District Legionnaire","uncommon","M","Creature","2",7.18,0,0,1,0,1,0
+"Tyrant's Scorn","uncommon","M","Instant","2",7.98,1,0,0,1,0,0
+"Ashiok, Dream Render","uncommon","M","Planeswalker","3",4.23,1,0,0,1,0,0
+"Domri, Anarch of Bolas","rare","M","Planeswalker","3",8.41,0,1,1,0,0,0
+"Dovin, Hand of Control","uncommon","M","Planeswalker","3",5.13,0,0,0,1,1,0
+"Feather, the Redeemed","rare","M","Creature","3",8.93,0,0,1,0,1,0
+"Gleaming Overseer","uncommon","M","Creature","3",7.75,1,0,0,1,0,0
+"Huatli, the Sun's Heart","uncommon","M","Planeswalker","3",4.04,0,1,0,0,1,0
+"Invade the City","uncommon","M","Sorcery","3",5.45,0,0,1,1,0,0
+"Kiora, Behemoth Beckoner","uncommon","M","Planeswalker","3",6.82,0,1,0,1,0,0
+"Leyline Prowler","uncommon","M","Creature","3",7.47,1,1,0,0,0,0
+"Living Twister","rare","M","Creature","3",7.87,0,1,1,0,0,0
+"Mayhem Devil","uncommon","M","Creature","3",6.18,1,0,1,0,0,0
+"Oath of Kaya","rare","M","Enchantment","3",7.94,1,0,0,0,1,0
+"Pledge of Unity","uncommon","M","Instant","3",6.81,0,1,0,0,1,0
+"Role Reversal","rare","M","Sorcery","3",6.63,0,0,1,1,0,0
+"Rubblebelt Rioters","uncommon","M","Creature","3",5.84,0,1,1,0,0,0
+"Saheeli, Sublime Artificer","uncommon","M","Planeswalker","3",6.87,0,0,1,1,0,0
+"Teferi, Time Raveler","rare","M","Planeswalker","3",7.56,0,0,0,1,1,0
+"Ajani, the Greathearted","rare","M","Planeswalker","4",8.77,0,1,0,0,1,0
+"Angrath, Captain of Chaos","uncommon","M","Planeswalker","4",7.71,1,0,1,0,0,0
+"Deathsprout","uncommon","M","Instant","4",8.25,1,1,0,0,0,0
+"Elite Guardmage","uncommon","M","Creature","4",7.85,0,0,0,1,1,0
+"Heartwarming Redemption","uncommon","M","Instant","4",4.16,0,0,1,0,1,0
+"Nahiri, Storm of Stone","uncommon","M","Planeswalker","4",6.86,0,0,1,0,1,0
+"Ral's Outburst","uncommon","M","Instant","4",8.15,0,0,1,1,0,0
+"Ral, Storm Conduit","rare","M","Planeswalker","4",7.37,0,0,1,1,0,0
+"Samut, Tyrant Smasher","uncommon","M","Planeswalker","4",6.23,0,1,1,0,0,0
+"Solar Blaze","rare","M","Sorcery","4",7.53,0,0,1,0,1,0
+"Sorin, Vengeful Bloodlord","rare","M","Planeswalker","4",8.43,1,0,0,0,1,0
+"Storrev, Devkarin Lich","rare","M","Creature","4",8.94,1,1,0,0,0,0
+"Tamiyo, Collector of Tales","rare","M","Planeswalker","4",5.82,0,1,0,1,0,0
+"Vraska, Swarm's Eminence","uncommon","M","Planeswalker","4",7.31,1,1,0,0,0,0
+"Widespread Brutality","rare","M","Sorcery","4",8.61,1,0,1,0,0,0
+"Bioessence Hydra","rare","M","Creature","5",8.03,0,1,0,1,0,0
+"Enter the God-Eternals","rare","M","Sorcery","5",9.7,1,0,0,1,0,0
+"Nicol Bolas, Dragon-God","mythic","M","Planeswalker","5",10.43,1,0,1,1,0,0
+"Niv-Mizzet Reborn","mythic","M","Creature","5",4.16,1,1,1,1,1,0
+"Roalesk, Apex Hybrid","mythic","M","Creature","5",10.23,0,1,0,1,0,0
+"Time Wipe","rare","M","Sorcery","5",9.59,0,0,0,1,1,0
+"Tolsimir, Friend to Wolves","rare","M","Creature","5",9.27,0,1,0,0,1,0
+"Casualties of War","rare","M","Sorcery","6",8.16,1,1,0,0,0,0
+"Kaya, Bane of the Dead","uncommon","M","Planeswalker","6",8.03,1,0,0,0,1,0
+"Grim Initiate","common","R","Creature","1",4.53,0,0,1,0,0,0
+"Samut's Sprint","common","R","Instant","1",4.22,0,0,1,0,0,0
+"Burning Prophet","common","R","Creature","2",5.61,0,0,1,0,0,0
+"Chandra's Pyrohelix","common","R","Instant","2",6.33,0,0,1,0,0,0
+"Chandra's Triumph","uncommon","R","Instant","2",7.51,0,0,1,0,0,0
+"Dreadhorde Arcanist","rare","R","Creature","2",5.32,0,0,1,0,0,0
+"Finale of Promise","mythic","R","Sorcery","2",5.8,0,0,1,0,0,0
+"Goblin Assailant","common","R","Creature","2",3,0,0,1,0,0,0
+"Heartfire","common","R","Instant","2",5.54,0,0,1,0,0,0
+"Jaya's Greeting","common","R","Instant","2",7.83,0,0,1,0,0,0
+"Nahiri's Stoneblades","common","R","Instant","2",3.4,0,0,1,0,0,0
+"Tibalt's Rager","uncommon","R","Creature","2",5.47,0,0,1,0,0,0
+"Ahn-Crop Invader","common","R","Creature","3",5.07,0,0,1,0,0,0
+"Blindblast","common","R","Instant","3",3.63,0,0,1,0,0,0
+"Devouring Hellion","uncommon","R","Creature","3",4.88,0,0,1,0,0,0
+"Honor the God-Pharaoh","common","R","Sorcery","3",4.68,0,0,1,0,0,0
+"Krenko, Tin Street Kingpin","rare","R","Creature","3",8.37,0,0,1,0,0,0
+"Raging Kronch","common","R","Creature","3",5.39,0,0,1,0,0,0
+"Spellgorger Weird","common","R","Creature","3",6.29,0,0,1,0,0,0
+"Tibalt, Rakish Instigator","uncommon","R","Planeswalker","3",5.56,0,0,1,0,0,0
+"Bolt Bend","uncommon","R","Instant","4",3.74,0,0,1,0,0,0
+"Chandra, Fire Artisan","rare","R","Planeswalker","4",8.4,0,0,1,0,0,0
+"Demolish","common","R","Sorcery","4",0.73,0,0,1,0,0,0
+"Dreadhorde Twins","uncommon","R","Creature","4",6.15,0,0,1,0,0,0
+"Goblin Assault Team","common","R","Creature","4",3.84,0,0,1,0,0,0
+"Neheb, Dreadhorde Champion","rare","R","Creature","4",9.2,0,0,1,0,0,0
+"Turret Ogre","common","R","Creature","4",5.38,0,0,1,0,0,0
+"Chainwhip Cyclops","common","R","Creature","5",5.03,0,0,1,0,0,0
+"Cyclops Electromancer","uncommon","R","Creature","5",6.08,0,0,1,0,0,0
+"Ilharg, the Raze-Boar","mythic","R","Creature","5",10.8,0,0,1,0,0,0
+"Jaya, Venerated Firemage","uncommon","R","Planeswalker","5",6.74,0,0,1,0,0,0
+"Sarkhan's Catharsis","common","R","Instant","5",4.45,0,0,1,0,0,0
+"Sarkhan the Masterless","rare","R","Planeswalker","5",9.71,0,0,1,0,0,0
+"Bond of Passion","uncommon","R","Sorcery","6",3.17,0,0,1,0,0,0
+"Invading Manticore","common","R","Creature","6",5.33,0,0,1,0,0,0
+"Wall of Runes","common","U","Creature","1",3.25,0,0,0,1,0,0
+"Augur of Bolas","uncommon","U","Creature","2",5.4,0,0,0,1,0,0
+"Callous Dismissal","common","U","Sorcery","2",5.94,0,0,0,1,0,0
+"Contentious Plan","common","U","Sorcery","2",4.82,0,0,0,1,0,0
+"Erratic Visionary","common","U","Creature","2",5.75,0,0,0,1,0,0
+"Fblthp, the Lost","rare","U","Creature","2",5.17,0,0,0,1,0,0
+"Finale of Revelation","mythic","U","Sorcery","2",7.11,0,0,0,1,0,0
+"Kasmina's Transmutation","common","U","Enchantment","2",7.05,0,0,0,1,0,0
+"Lazotep Plating","uncommon","U","Instant","2",5.22,0,0,0,1,0,0
+"Narset's Reversal","rare","U","Instant","2",5.08,0,0,0,1,0,0
+"Sky Theater Strix","common","U","Creature","2",4.8,0,0,0,1,0,0
+"Teferi's Time Twist","common","U","Instant","2",4.71,0,0,0,1,0,0
+"Aven Eternal","common","U","Creature","3",6.87,0,0,0,1,0,0
+"Flux Channeler","uncommon","U","Creature","3",6.66,0,0,0,1,0,0
+"Jace's Triumph","uncommon","U","Sorcery","3",5.86,0,0,0,1,0,0
+"Naga Eternal","common","U","Creature","3",2.54,0,0,0,1,0,0
+"Narset, Parter of Veils","uncommon","U","Planeswalker","3",4.99,0,0,0,1,0,0
+"No Escape","common","U","Instant","3",5.72,0,0,0,1,0,0
+"Spellkeeper Weird","common","U","Creature","3",5.24,0,0,0,1,0,0
+"Stealth Mission","common","U","Sorcery","3",4.4,0,0,0,1,0,0
+"Bond of Insight","uncommon","U","Sorcery","4",4.58,0,0,0,1,0,0
+"Crush Dissent","common","U","Instant","4",4.11,0,0,0,1,0,0
+"God-Eternal Kefnet","mythic","U","Creature","4",10.65,0,0,0,1,0,0
+"Jace, Wielder of Mysteries","rare","U","Planeswalker","4",7.46,0,0,0,1,0,0
+"Kasmina, Enigmatic Mentor","uncommon","U","Planeswalker","4",7.84,0,0,0,1,0,0
+"Relentless Advance","common","U","Sorcery","4",4.06,0,0,0,1,0,0
+"Rescuer Sphinx","uncommon","U","Creature","4",6.84,0,0,0,1,0,0
+"Spark Double","rare","U","Creature","4",7.21,0,0,0,1,0,0
+"Tamiyo's Epiphany","common","U","Sorcery","4",6.35,0,0,0,1,0,0
+"Thunder Drake","common","U","Creature","4",6.03,0,0,0,1,0,0
+"Ashiok's Skulker","common","U","Creature","5",4.92,0,0,0,1,0,0
+"Eternal Skylord","uncommon","U","Creature","5",7.72,0,0,0,1,0,0
+"Totally Lost","common","U","Instant","5",4.58,0,0,0,1,0,0
+"Commence the Endgame","rare","U","Instant","6",7.38,0,0,0,1,0,0
+"Kiora's Dambreaker","common","U","Creature","6",5,0,0,0,1,0,0
+"Charmed Stray","common","W","Creature","1",2.57,0,0,0,0,1,0
+"Defiant Strike","common","W","Instant","1",4.02,0,0,0,0,1,0
+"Gideon's Sacrifice","common","W","Instant","1",3.31,0,0,0,0,1,0
+"Law-Rune Enforcer","common","W","Creature","1",7.11,0,0,0,0,1,0
+"Ajani's Pridemate","uncommon","W","Creature","2",6.01,0,0,0,0,1,0
+"Battlefield Promotion","common","W","Instant","2",4.97,0,0,0,0,1,0
+"Divine Arrow","common","W","Instant","2",6.73,0,0,0,0,1,0
+"Finale of Glory","mythic","W","Sorcery","2",9.33,0,0,0,0,1,0
+"Gideon's Triumph","uncommon","W","Instant","2",5.97,0,0,0,0,1,0
+"Grateful Apparition","uncommon","W","Creature","2",6.6,0,0,0,0,1,0
+"Martyr for the Cause","common","W","Creature","2",5.38,0,0,0,0,1,0
+"Pouncing Lynx","common","W","Creature","2",5.35,0,0,0,0,1,0
+"Rally of Wings","uncommon","W","Instant","2",4.1,0,0,0,0,1,0
+"Tomik, Distinguished Advokist","rare","W","Creature","2",6.33,0,0,0,0,1,0
+"War Screecher","common","W","Creature","2",5.38,0,0,0,0,1,0
+"Gideon Blackblade","mythic","W","Planeswalker","3",10.84,0,0,0,0,1,0
+"Makeshift Battalion","common","W","Creature","3",5.14,0,0,0,0,1,0
+"Prison Realm","uncommon","W","Enchantment","3",8.7,0,0,0,0,1,0
+"Rising Populace","common","W","Creature","3",5.49,0,0,0,0,1,0
+"Teyo's Lightshield","common","W","Creature","3",3.88,0,0,0,0,1,0
+"Teyo, the Shieldmage","uncommon","W","Planeswalker","3",4.08,0,0,0,0,1,0
+"Topple the Statue","common","W","Instant","3",3.95,0,0,0,0,1,0
+"Trusted Pegasus","common","W","Creature","3",7.27,0,0,0,0,1,0
+"Ironclad Krovod","common","W","Creature","4",3.07,0,0,0,0,1,0
+"Loxodon Sergeant","common","W","Creature","4",4.6,0,0,0,0,1,0
+"Ravnica at War","rare","W","Sorcery","4",4.22,0,0,0,0,1,0
+"The Wanderer","uncommon","W","Planeswalker","4",6.89,0,0,0,0,1,0
+"Bond of Discipline","uncommon","W","Sorcery","5",4.91,0,0,0,0,1,0
+"Enforcer Griffin","common","W","Creature","5",5.34,0,0,0,0,1,0
+"God-Eternal Oketra","mythic","W","Creature","5",11.54,0,0,0,0,1,0
+"Ignite the Beacon","rare","W","Instant","5",3.95,0,0,0,0,1,0
+"Single Combat","rare","W","Sorcery","5",6.23,0,0,0,0,1,0
+"Wanderer's Strike","common","W","Sorcery","5",7.27,0,0,0,0,1,0
+"Bulwark Giant","common","W","Creature","6",3.34,0,0,0,0,1,0
+"Sunblade Angel","uncommon","W","Creature","6",6.62,0,0,0,0,1,0

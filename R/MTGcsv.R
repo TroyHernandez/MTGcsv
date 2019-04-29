@@ -2,96 +2,100 @@
 
 # https://mtgjson.com/
 
+set.name <- "WAR"
+
+download.file(paste0("https://mtgjson.com/json/", set.name, ".json"),
+              paste0("data/", set.name, ".json"))
 # install.packages("jsonlite")
 library(jsonlite)
-unzip(zipfile = "AllSets.json")
-mtg <- read_json(path = "AllSets.json")
-# which(names(mtg)=="RNA")
-length(mtg[[which(names(mtg)=="RNA")]])
-names(mtg[[which(names(mtg)=="RNA")]])
+mtg <- read_json(path = paste0("data/", set.name, ".json"))
+# names(mtg)
+# length(mtg[[155]])
+# names(mtg[[155]])
 
 
-RNA <- mtg$RNA$cards
-col.names.RNA <- unique(unlist(lapply(RNA, names)))  
+set <- mtg$cards
+# good.cols <- c("name", "rarity", "colId", "types", "cmc")
+col.names.set <-  c("number", "name", "rarity", "colorIdentity",
+                    "types", "convertedManaCost") # unique(unlist(lapply(set, names)))
   # c("name", "color", "rarity", "cmc", "grade")
-RNA.flat <- data.frame(matrix("", ncol = length(col.names.RNA), nrow = length(RNA)),
+set.flat <- data.frame(matrix("", ncol = length(col.names.set), nrow = length(set)),
                         stringsAsFactors = FALSE)
-colnames(RNA.flat) <- col.names.RNA
+colnames(set.flat) <- col.names.set
 
-for(i in 1:length(RNA)){
-  for(j in 1:ncol(RNA.flat)){
-    if(sum(names(RNA[[i]])==col.names.RNA[j])){
-      if(length(RNA[[i]][[which(names(RNA[[i]])==col.names.RNA[j])]]) > 0){
-        RNA.flat[i, j] <- RNA[[i]][[which(names(RNA[[i]])==col.names.RNA[j])]]
+for(i in 1:length(set)){
+  for(j in 1:ncol(set.flat)){
+    if(sum(names(set[[i]])==col.names.set[j])){
+      ind <- which(names(set[[i]])==col.names.set[j])
+      if(!is.list(set[[i]][ind])){
+        set.flat[i, j] <- set[[i]][[ind]]
+      } else {
+        if(is.list(set[[i]][ind]) && length(set[[i]][[ind]]) > 0){
+          set.flat[i, j] <- set[[i]][[ind]]
+        }
       }
     }
   }
 }
 
-RNA.clean <- RNA.flat[, c("number", "name", "rarity", "colorIdentity",
-                          "types", "convertedManaCost")]
-
-RNA.clean <- cbind(RNA.clean,
+set.clean <- cbind(set.flat,
                    "B" = 0, "G" = 0, "R" = 0, "U" = 0, "W" = 0,
                    "quantity" = 0)
 # Get color columns in order
-for(i in 1:length(RNA)){
-  card <- RNA[[i]]
+for(i in 1:length(set)){
+  card <- set[[i]]
   if(length(card$colorIdentity) > 0){
     for(j in 1:length(card$colorIdentity)){
-      RNA.clean[i, card$colorIdentity[[j]]] <- 1
+      set.clean[i, card$colorIdentity[[j]]] <- 1
     }
   }
   if(length(card$colorIdentity) > 1){
-    RNA.clean[i, "colorIdentity"] <- "M"
+    set.clean[i, "colorIdentity"] <- "M"
   }
 }
 
 # Fixing "colorIdentity"
-RNA.clean[which(RNA.clean$types == "Land"), "colorIdentity"] <- "Land"
-RNA.clean[which(RNA.clean$types == "Artifact"), "colorIdentity"] <- "Artifact"
+set.clean[which(set.clean$types == "Land"), "colorIdentity"] <- "Land"
+set.clean[which(set.clean$types == "Artifact"), "colorIdentity"] <- "Artifact"
 
 # Account for artifact creatures as creatures
-RNA.clean[which(lapply(sapply(RNA,function(x) x["types"]), length)>1),
+set.clean[which(lapply(sapply(set,function(x) x["types"]), length)>1),
           "types"] <- "Creature"
 
-# Next time remember to delete Planeswalker deck cards before reordering
-# Remove out of set cards
-RNA.clean$number <- as.integer(RNA.clean$number)
-RNA.clean <- RNA.clean[which(RNA.clean$number <= 259), ]
+set.clean$number <- as.integer(set.clean$number)
 
 # Combine split cards; use smaller CMC
-split.card.nums <- which(table(RNA.clean$number) > 1)
-second.splits <- c()
-for(i in 1:length(split.card.nums)){
-  inds <- which(RNA.clean$number == split.card.nums[i])
-  RNA.clean$name[inds[1]] <- paste0(RNA.clean$name[inds[1]], "/",
-                                   RNA.clean$name[inds[2]])
-  second.splits <- c(second.splits, inds[2])
+split.card.nums <- which(table(set.clean$number) > 1)
+
+if(length(split.card.nums) > 0){
+  second.splits <- c()
+  for(i in 1:length(split.card.nums)){
+    inds <- which(set.clean$number == split.card.nums[i])
+    set.clean$name[inds[1]] <- paste0(set.clean$name[inds[1]], "/",
+                                      set.clean$name[inds[2]])
+    second.splits <- c(second.splits, inds[2])
+  }
+  set.clean <- set.clean[-second.splits, ]
 }
-RNA.clean <- RNA.clean[-second.splits, ]
 
 # Add in MTG Community Review rankings
-Com.Review <- read.csv("RNAcommunityReview.csv", header = FALSE)
+Com.Review <- read.csv("data/WARRatings.csv", header = FALSE)
+Com.Review <- Com.Review[, c(8, 1, 5)]
 colnames(Com.Review) <- c("number", "name", "score")
 Com.Review$score <- round(Com.Review$score, 2)
+# Com.Review$number <- round(Com.Review$score, 2)
 
 # Merges, drop duplicate gates
-RNA.clean <- merge(Com.Review, RNA.clean, "number")[, -c(1, 4)]
-colnames(RNA.clean)[c(1, 6)] <- c("name", "cmc")
+set.merge <- merge(Com.Review, set.clean, "number")[, -c(1, 4)]
+colnames(set.merge)[c(1, 6)] <- c("name", "cmc")
 
 # Reorder columns
-RNA.clean <- RNA.clean[, c("name", "rarity", "colorIdentity", "types", "cmc",
+set.merge <- set.merge[, c("name", "rarity", "colorIdentity", "types", "cmc",
                            "score", "B", "G", "R", "U", "W", "quantity")]
 
 # Reorder rows
-RNA.clean <- RNA.clean[order(RNA.clean$colorIdentity, RNA.clean$cmc,
-                             RNA.clean$name), ]
-RNA.clean.multi <- RNA.clean[which(RNA.clean$colorIdentity == "M"), ]
-RNA.clean.multi <- RNA.clean.multi[order(RNA.clean.multi$G, RNA.clean.multi$U,
-                                         RNA.clean.multi$R, RNA.clean.multi$B,
-                                         RNA.clean.multi$cmc,
-                                         RNA.clean.multi$name), ]
-RNA.clean[which(RNA.clean$colorIdentity == "M"), ] <- RNA.clean.multi
-  
-write.csv(RNA.clean, "RNA.csv", row.names = FALSE)
+set.merge <- set.merge[order(set.merge$colorIdentity, set.merge$cmc,
+                             set.merge$name), ]
+
+write.csv(set.merge, paste0("data/", set.name, ".csv"), row.names = FALSE)
+write.csv(set.merge, paste0("MTG/", set.name, ".csv"), row.names = FALSE)
