@@ -1,7 +1,9 @@
 # MTGopt.R
 
 source("MTG/MTGopt_funcs.R")
-draft <- read.csv("GRN_180929.csv", stringsAsFactors = FALSE)
+source("MTG/read_utils.R")
+
+draft <- parse_decklist("sample_grn_decklist.txt" )
 
 num.colors <- 4
 num.non.land <- 23
