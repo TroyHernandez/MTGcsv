@@ -2,7 +2,7 @@
 
 # https://mtgjson.com/
 
-set.name <- "WAR"
+set.name <- "M20"
 
 download.file(paste0("https://mtgjson.com/json/", set.name, ".json"),
               paste0("data/", set.name, ".json"))
@@ -79,8 +79,8 @@ if(length(split.card.nums) > 0){
 }
 
 # Add in MTG Community Review rankings
-Com.Review <- read.csv("data/WARRatings.csv", header = FALSE)
-Com.Review <- Com.Review[, c(8, 1, 5)]
+Com.Review <- read.csv(paste0("data/", set.name, "Ratings.csv"), skip = 1)
+Com.Review <- Com.Review[, c(9, 2, 6)]
 colnames(Com.Review) <- c("number", "name", "score")
 Com.Review$score <- round(Com.Review$score, 2)
 # Com.Review$number <- round(Com.Review$score, 2)
