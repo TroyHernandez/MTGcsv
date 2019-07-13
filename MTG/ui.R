@@ -13,7 +13,7 @@ library(shiny)
 shinyUI(fluidPage(
   
   # Application title
-  titlePanel("MTG Sealed Draft Tool - WAR"),
+  titlePanel("MTG Sealed Draft Tool - M20"),
   
   # Sidebar with a slider input for number of bins 
   fluidRow(
